@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajjwal Singh | Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <header>
+        <div class="logo" data-aos="fade-down">PS</div>
+        <nav>
+            <ul>
+                <li data-aos="fade-down" data-aos-delay="100"><a href="#home">Home</a></li>
+                <li data-aos="fade-down" data-aos-delay="200"><a href="#about">About</a></li>
+                <li data-aos="fade-down" data-aos-delay="300"><a href="#experience">Experience</a></li>
+                <li data-aos="fade-down" data-aos-delay="400"><a href="#projects">Projects</a></li>
+                <li data-aos="fade-down" data-aos-delay="500"><a href="#skills">Skills</a></li>
+                <li data-aos="fade-down" data-aos-delay="600"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Prajjwal Singh">Prajjwal Singh</h1>
+                <div class="typewriter">
+                    <span id="typewriter-text"></span><span class="cursor">|</span>
+                </div>
+                <div class="hero-links" data-aos="fade-up" data-aos-delay="800">
+                    <a href="mailto:prajjwal875@gmail.com" class="btn"><i class="fas fa-envelope"></i> Contact Me</a>
+                    <a href="https://linkedin.com/in/prajjwal-singh-28459b171" target="_blank" class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/prajjwal1999" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="section-header" data-aos="fade-up">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>I'm a skilled Software Engineer with experience in building high-performance, scalable systems. Currently working at Gokwik Commerce Solution as an SDE 1, I specialize in developing robust backend systems and optimizing performance.</p>
+                    <p>With a strong foundation in Computer Science from NIT Hamirpur, I've worked with various technologies including Golang, Java, JavaScript, and more. I'm passionate about solving complex problems and creating efficient solutions.</p>
+                    <div class="about-details">
+                        <div class="detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>G-68, HathiBarkala Survey Estate, Dehradun, Uttarakhand 248001</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-phone"></i>
+                            <span>798-375-9495</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>prajjwal875@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <div class="image-container">
+                        <div class="image-placeholder">PS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Experience</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">June 2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>SDE 1</h3>
+                        <h4>Gokwik Commerce Solution, Gurugram, India</h4>
+                        <ul>
+                            <li>Developed and optimized a high-performance WhatsApp messaging campaign service using Meta APIs, capable of sending billions of messages at scale.</li>
+                            <li>Leveraged multiple message templates (e.g., carousel, image, video) for diverse campaign requirements.</li>
+                            <li>Achieved 13k requests per second (RPS) throughput on a standard EC2 instance, utilizing Golang, Kafka, and Redis for asynchronous message queuing, real-time processing, and efficient data caching.</li>
+                            <li>Designed and implemented an analytics dashboard within two weeks using ClickHouse DB, achieving a dramatic reduction in API data load times from several seconds to milliseconds by leveraging materialized views and table engines in ClickHouse with Node.js.</li>
+                        </ul>
+                        <div class="tags">
+                            <span>Golang</span>
+                            <span>Kafka</span>
+                            <span>Redis</span>
+                            <span>ClickHouse</span>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">June 2022 - June 2024</div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer</h3>
+                        <h4>Paytm (One97 Communications), Noida, India</h4>
+                        <ul>
+                            <li>Designed and built asynchronous API cron jobs to retrieve aggregated performance data from Elasticsearch, reducing cron job duration from 6-7 hours to 3-4 hours.</li>
+                            <li>Developed a payout system and rule engine for merchant payouts, ensuring timely daily payouts with applied commissions.</li>
+                            <li>Played a key role in designing a rule engine to address complex use cases involving merchants and agents.</li>
+                            <li>Engineered APIs to compute aggregated data for numerous merchants and agents, reducing API response time from 1000ms to 300-400ms using MongoDB's aggregation pipeline.</li>
+                            <li>Developed an incentive rule engine project using Java Spring Boot, implementing interconnected services, message buses (Kafka), and real-time processing with non-relational databases (MongoDB).</li>
+                            <li>Worked on the ONDC project payout system, building a backend system with efficient latency.</li>
+                            <li>Maintained and enhanced a report generation system for financial and business purposes.</li>
+                            <li>Revamped and migrated a legacy system to a new entity within the organization, setting up an end-to-end pipeline.</li>
+                        </ul>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>Elasticsearch</span>
+                            <span>Node.js</span>
+                            <span>SQL</span>
+                            <span>RabbitMQ</span>
+                            <span>Kafka</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 2022 - June 2022</div>
+                    <div class="timeline-content">
+                        <h3>SDE Intern</h3>
+                        <h4>Paytm (One97 Communications), Noida, India</h4>
+                        <ul>
+                            <li>Developed and Handled Highly scalable low latency apis for faster data processing to handle and process million worth of payout to merchant.</li>
+                            <li>Built robust and time-efficient systems for revenue report generation, handling millions of transactions per day.</li>
+                            <li>Worked with cross-platform backend frameworks via RabbitMQ and handled OS migration testing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="flip-left">
+                    <div class="project-content">
+                        <h3>Fractal</h3>
+                        <p>In mathematics pattern visualiser UI, a fractal is a subset of Euclidean space with a fractal dimension that strictly exceeds its topological dimension. One way that fractals are different from finite geometric figures is how they scale. Doubling the edge lengths of a polygon multiplies its area by four, which is two (the ratio of the new to the old side length) raised to the power of two.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/prajjwal1999/fractal" target="_blank" class="btn btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="flip-right">
+                    <div class="project-content">
+                        <h3>Image Compression System</h3>
+                        <p>This project implements an Image Processing System that compresses images for optimal and faster image transfer and to increase system latency and throughput.</p>
+                        <div class="tags">
+                            <span>TypeScript</span>
+                            <span>Kafka</span>
+                            <span>Redis</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/prajjwal1999/image-compression" target="_blank" class="btn btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Technical Skills</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category" data-aos="zoom-in">
+                    <h3>Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-golang"></i></div>
+                            <span>Golang</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-java"></i></div>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <span>C/C++</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <span>Next.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                            <span>Express.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-java"></i></div>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <span>Nest</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="zoom-in" data-aos-delay="200">
+                    <h3>Databases & Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span>Elasticsearch</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span>ClickHouse</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span>Redis</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="zoom-in" data-aos-delay="300">
+                    <h3>DevOps & Others</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-jenkins"></i></div>
+                            <span>Jenkins</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-stream"></i></div>
+                            <span>Kafka</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-rabbit"></i></div>
+                            <span>RabbitMQ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements" data-aos="fade-up">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>Achieved a rank of 511 in the November Challenge 2020 (Division 2), CodeChef</li>
+                    <li>CodeChef Highest Rating: 1741</li>
+                    <li>CodeChef Profile: prajjwalrtr</li>
+                    <li>LeetCode Profile: prajjwal875</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Contact Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>G-68, HathiBarkala Survey Estate, Dehradun, Uttarakhand 248001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:prajjwal875@gmail.com">prajjwal875@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>798-375-9495</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/prajjwal-singh-28459b171" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/prajjwal1999" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Prajjwal Singh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

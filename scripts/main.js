@@ -348,6 +348,123 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Contact Form Submission
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const subject = this.querySelector('input[placeholder="Subject"]').value;
+            const message = this.querySelector('textarea').value;
+            
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            try {
+                const response = await fetch('https://ses-chi.vercel.app/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        message: `Subject: ${subject}\n\n${message}`
+                    })
+                });
+                
+                if (response.ok) {
+                    // Success message
+                    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                    this.reset(); // Clear the form
+                } else {
+                    // Error message
+                    showNotification('Failed to send message. Please try again.', 'error');
+                }
+            } catch (error) {
+                console.error('Error sending message:', error);
+                showNotification('Failed to send message. Please try again.', 'error');
+            } finally {
+                // Reset button state
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
+        });
+    }
+});
+
+// Notification system
+function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span class="notification-message">${message}</span>
+            <button class="notification-close">&times;</button>
+        </div>
+    `;
+    
+    // Add styles
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 10000;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        max-width: 400px;
+        font-family: 'Poppins', sans-serif;
+    `;
+    
+    // Add to page
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Close button functionality
+    const closeButton = notification.querySelector('.notification-close');
+    closeButton.addEventListener('click', () => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    });
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                notification.remove();
+            }, 300);
+        }
+    }, 5000);
+}
+
 // Preloader
 window.addEventListener('load', function() {
     // Hide preloader if needed
